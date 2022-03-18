@@ -10,7 +10,10 @@ async fn main() -> std::io::Result<()> {
     env_logger::init();
 
     let address = std::env::var("ADDRESS").unwrap_or("127.0.0.1".to_string());
-    let port: u16  = std::env::var("PORT").unwrap_or("8080".to_string()).parse().expect("PORT must be a number");
+    let port: u16 = std::env::var("PORT")
+        .unwrap_or("8080".to_string())
+        .parse()
+        .expect("PORT must be a number");
 
     HttpServer::new(|| {
         App::new()

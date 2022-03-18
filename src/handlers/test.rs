@@ -1,5 +1,5 @@
-use actix_web::{web, Result, Responder};
-use crate::models::test::{TestObject};
+use crate::models::test::TestObject;
+use actix_web::{web, Responder, Result};
 
 // pub async fn test() -> Result<HttpResponse, Error> {
 //     Ok(HttpResponse::Ok().finish())
